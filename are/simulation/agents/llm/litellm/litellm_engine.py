@@ -128,4 +128,4 @@ Action:
 
             return res, None
         except (AuthenticationError, APIError) as e:
-            raise LLMEngineException("Auth error in litellm.") from e
+            raise LLMEngineException(f"Auth error in litellm: {e}") from e
